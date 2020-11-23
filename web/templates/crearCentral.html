@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Centrales</title>
+</head>
+<body>
+
+<div class="container" style="text-align: center;border-style: solid; max-width: 400px; margin-top: 20px;">
+    <h4>Crear una central</h4>
+
+    <form id="form-central" name="form-central" action="/guardarCentrales" method="POST" style="margin-top: 40px;">
+        <label >Origen</label>
+        <div>
+            <input name="origen" id="origen"class="col-md-10" placeholder="Digite un origen para la central" style="width: 300px;">
+        </div>
+        <label>Destinatario</label>
+        <div>
+            <input name="destinatario" id="destinatario"class="col-md-10" placeholder="Digite un destinatario para la central" style="width: 300px;">
+        </div>
+        <label>Estado Conexión</label>
+        <div>
+            <select name="estado_conexion" id="estado_conexion"class="col-md-10"style="width: 300px;">
+                <option>Establecida</option>
+                <option>Rechazada</option>
+                <option>Pendiente</option>
+            </select>
+        </div>
+        <label>Estado Actual</label>
+        <div>
+            <select name="estado_actual" id="estado_actual"class="col-md-10"style="width: 300px;">
+                <option>En linea</option>
+                <option>Finalizado</option>
+                <option>En espera</option>
+            </select>
+        </div>
+        <label>Fecha</label>
+        <div>
+            <input name="fecha" id="fecha"class="col-md-10" type="date" style="max-width: 300px;">
+        </div>
+        <div style="text-align: center;">
+            <button type="submit" id="submit" class="btn btn-primary" style="margin-top: 15px;">
+                Terminado
+            </button>
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>
