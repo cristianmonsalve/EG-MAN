@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Lista de Centrales</title>
+</head>
+<body>
+
+  
+    <div class="container" style="text-align: center;border-style: solid; max-width: auto; margin-top: 50px;">
+      <h4>Lista de Centrales</h4>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Origen</th>
+                <th>Destinatario</th>
+                <th>Estado conexion</th>
+                <th>Estado actual</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody id="listarCentrales">
+              {% for central in centrales %}
+              <tr>
+                <td>{{central['origen']}}</td>
+                <td>{{central['destinatario']}}</td>
+                <td>{{central['estado_conexion']}}</td>
+                <td>{{central['estado_actual']}}</td>
+                <td>{{central['fecha']}}</td>
+              </tr>
+              {% endfor %}
+              
+            </tbody>
+          </table>
+
+    </div>
+
+</body>
+</html>
